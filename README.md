@@ -2,6 +2,10 @@
 
 A modern React implementation of the classic Magic Eight Ball. Users can ask a question, shake the Eight Ball, and receive a randomized response through an animated, polished user interface.
 
+## Live Demo
+
+🌐 **Live Site:** https://graceelliott8374-tech.github.io/magic-eight-ball/
+
 ---
 
 ## Features
