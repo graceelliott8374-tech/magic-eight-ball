@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/magic-eight-ball/static/css/main.42f5a704.css",
+    "main.js": "/magic-eight-ball/static/js/main.2e57eca3.js",
+    "static/media/wave.jpg": "/magic-eight-ball/static/media/wave.7478d3263d0933b68666.jpg",
+    "index.html": "/magic-eight-ball/index.html",
+    "main.42f5a704.css.map": "/magic-eight-ball/static/css/main.42f5a704.css.map",
+    "main.2e57eca3.js.map": "/magic-eight-ball/static/js/main.2e57eca3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42f5a704.css",
+    "static/js/main.2e57eca3.js"
+  ]
+}
