@@ -144,10 +144,10 @@ button:active {
     #000 75%
   );
   box-shadow:
-  inset -25px -30px 40px rgba(0, 0, 0, 0.85),
-  inset 16px 14px 24px rgba(255, 255, 255, 0.1),
-  0 24px 45px rgba(0, 0, 0, 0.55),
-  0 0 30px rgba(147, 51, 234, 0.18);
+    inset -25px -30px 40px rgba(0, 0, 0, 0.85),
+    inset 16px 14px 24px rgba(255, 255, 255, 0.1),
+    0 24px 45px rgba(0, 0, 0, 0.55),
+    0 0 30px rgba(147, 51, 234, 0.18);
   animation: floatBall 4s ease-in-out infinite;
 }
 @keyframes floatBall {
@@ -274,5 +274,235 @@ button:active {
 
   100% {
     transform: translateX(0) rotate(0deg);
+  }
+}
+
+.header h1 {
+  margin: 0 0 0.75rem;
+}
+
+.header__subtitle {
+  max-width: 520px;
+  margin: 0 auto 1.75rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.mode-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.mode-toggle {
+  position: relative;
+  width: 66px;
+  height: 34px;
+  flex: 0 0 66px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(196, 164, 255, 0.5);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 2px 7px rgba(0, 0, 0, 0.4),
+    0 0 16px rgba(139, 92, 246, 0.2);
+}
+
+.mode-toggle:hover {
+  transform: none;
+  box-shadow:
+    inset 0 2px 7px rgba(0, 0, 0, 0.4),
+    0 0 22px rgba(139, 92, 246, 0.4);
+}
+
+.mode-toggle:active {
+  transform: none;
+}
+
+.mode-toggle:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 4px;
+}
+
+.mode-toggle__slider {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: #f8f5ff;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+  transform: translateX(0);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.tyger-portrait {
+  display: block;
+  width: min(290px, 78vw);
+  max-height: 280px;
+  margin: -0.75rem auto 1rem;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.45));
+  animation: tygerEntrance 0.5s ease;
+}
+
+@keyframes tygerEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.App {
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.App.tyger-mode {
+  background: rgba(33, 23, 13, 0.72);
+  border-color: rgba(231, 178, 90, 0.42);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.48),
+    0 0 55px rgba(217, 151, 45, 0.2);
+}
+
+.tyger-mode .mode-toggle {
+  background: linear-gradient(135deg, #e3aa48, #9b5c18);
+  border-color: rgba(255, 224, 162, 0.8);
+  box-shadow:
+    inset 0 2px 7px rgba(74, 36, 3, 0.45),
+    0 0 20px rgba(227, 170, 72, 0.38);
+}
+
+.tyger-mode .mode-toggle__slider {
+  background: #fff3d6;
+  transform: translateX(32px);
+}
+
+.header--tyger .glow {
+  animation: tygerGlow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes tygerGlow {
+  from {
+    text-shadow:
+      0 0 10px rgba(255, 221, 153, 0.65),
+      0 0 22px rgba(224, 157, 53, 0.55);
+  }
+
+  to {
+    text-shadow:
+      0 0 14px rgba(255, 232, 184, 0.9),
+      0 0 34px rgba(224, 157, 53, 0.8),
+      0 0 48px rgba(164, 91, 20, 0.5);
+  }
+}
+
+.tyger-mode #input {
+  border-color: rgba(231, 178, 90, 0.55);
+}
+
+.tyger-mode #input:focus {
+  border-color: #e3aa48;
+  box-shadow:
+    0 0 0 4px rgba(227, 170, 72, 0.18),
+    0 0 24px rgba(227, 170, 72, 0.28);
+}
+
+.tyger-mode button:not(.mode-toggle) {
+  background: linear-gradient(135deg, #c9852c, #8b4b13);
+  box-shadow: 0 8px 20px rgba(139, 75, 19, 0.4);
+}
+
+.tyger-mode button:not(.mode-toggle):hover {
+  box-shadow: 0 12px 28px rgba(201, 133, 44, 0.48);
+}
+
+.display--tyger .eight-ball {
+  box-shadow:
+    inset -25px -30px 40px rgba(0, 0, 0, 0.85),
+    inset 16px 14px 24px rgba(255, 255, 255, 0.1),
+    0 24px 45px rgba(0, 0, 0, 0.55),
+    0 0 34px rgba(227, 170, 72, 0.32);
+}
+
+.display--tyger .eight-ball__number {
+  background: radial-gradient(circle at 35% 30%, #fff8e9, #e7be78 72%);
+}
+
+.display--tyger .eight-ball__number span {
+  font-size: 3rem;
+}
+
+.tyger-mode .answer {
+  text-shadow: 0 0 14px rgba(227, 170, 72, 0.85);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .App {
+    width: min(100%, 92vw);
+    padding: 2rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  h1 {
+    font-size: 2.15rem;
+  }
+
+  .header__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .mode-selector {
+    gap: 0.55rem;
+    font-size: 0.8rem;
+  }
+
+  .tyger-portrait {
+    width: min(230px, 72vw);
+    max-height: 225px;
+  }
+
+  .eight-ball {
+    width: 190px;
+  }
+
+  .eight-ball-stage {
+    min-height: 225px;
+  }
+
+  .answer {
+    font-size: 1.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow,
+  .eight-ball,
+  .eight-ball--shaking,
+  .tyger-portrait {
+    animation: none;
+  }
+
+  * {
+    scroll-behavior: auto;
   }
 }
